@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Municipios de Colombia</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Municipios de Colombia</h1>
+
+    <div class="filtros">
+      <div class="grupo-filtro">
+        <label>Región:</label>
+        <select id="filtroRegion"><option value="">Todos</option></select>
+      </div>
+      <div class="grupo-filtro">
+        <label>Departamento:</label>
+        <select id="filtroDepto"><option value="">Todos</option></select>
+      </div>
+      <div class="grupo-filtro">
+        <label>Código DANE Depto:</label>
+        <select id="filtroCodigoDepto"><option value="">Todos</option></select>
+      </div>
+      <div class="grupo-filtro">
+        <label>Municipio:</label>
+        <select id="filtroMunicipio"><option value="">Todos</option></select>
+      </div>
+      <div class="grupo-filtro">
+        <label>Código DANE Municipio:</label>
+        <select id="filtroCodigoMunicipio"><option value="">Todos</option></select>
+      </div>
+      <button id="btnLimpiar">Limpiar filtros</button>
+    </div>
+
+    <p id="contador"></p>
+
+    <div class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>Región</th>
+            <th>Departamento</th>
+            <th>Código DANE Departamento</th>
+            <th>Municipio</th>
+            <th>Código DANE Municipio</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-municipios"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Importa el módulo del controlador -->
+  <script type="module" src="../Controlador/app.js"></script>
+</body>
+</html>
